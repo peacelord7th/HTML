@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Division</title>
+
+        <style>
+            body{
+                color: darkblue;
+                background-color: aqua;
+            }
+            h1{
+                color: red;
+                font-size: larger;
+                font-weight: 400;
+            }
+            span{
+                color: black;
+            }
+            div{
+                color: red;
+                font-size: large;
+                font-weight: 300;
+            }
+            
+        </style>
+
+
+    </head>
+    <body>
+        <img src="data:image/png;base64,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" alt="">
+        <h1>Div Tag</h1>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem molestiae, voluptas eligendi quas nobis in esse maxime error id et, voluptates sit nemo, repellat ipsum laborum. Nulla asperiores doloremque quibusdam. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, aperiam neque officia soluta, itaque vero magni voluptas, delectus iusto in porro optio nam sed odio rem ullam vitae minima nostrum!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat veritatis blanditiis officiis odio? Asperiores, nisi <div>I am Division Tag</div>illo perspiciatis necessitatibus minus iste, consequuntur eligendi sint alias repellendus vitae nulla eaque totam voluptatibus.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus optio quo adipisci quae nisi odio hic excepturi alias maxime eos omnis deleniti consequuntur quidem beatae, ullam, modi iure dolorum consectetur.
+        <h1>Span Tag</h1>
+        <span>I am Span Tag</span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. <bold><italic>I am Spanian Tag</italic></bold>Voluptates ea unde ipsum aliquid debitis totam ipsam voluptatum veniam quasi, magnam iste dignissimos, repellendus rerum aut, numquam pariatur consequatur? Architecto, autem.
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis <span>I am span Tag</span>, corporis officia nobis accusamus iusto. Quidem sequi reiciendis repellendus debitis tempora reprehenderit consequatur natus consequuntur, harum aliquam blanditiis officiis alias!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero explicabo obcaecati blanditiis veniam optio ipsa dolor praesentium quaerat vero, facilis reprehenderit, maiores corporis reiciendis laboriosam? Exercitationem dolor molestias aliquid laboriosam.
+        <span>I am Span</span>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit blanditiis asperiores, iste ab soluta fuga hic facilis, dicta numquam necessitatibus reiciendis fugit quaerat? Laborum harum laboriosam pariatur, qui deleniti officia.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, porro molestiae? Quibusdam dolores ullam sint iusto odio, assumenda esse tempore a voluptates recusandae! Voluptates mollitia error maxime unde! Doloremque, praesentium?Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cumque iusto tempora voluptates, tempore eaque veritatis doloremque nostrum ut nemo deleniti distinctio exercitationem magnam sed itaque quasi magni? Voluptate, dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci pariatur consectetur reprehenderit incidunt mollitia optio placeat accusantium culpa quos dolorem asperiores quia ut, maxime eveniet porro facilis veniam inventore sed?
+
+    </body>
+
+</html>
