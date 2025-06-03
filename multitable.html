@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table of 3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #008CBA;
+            color: white;
+            border: none;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 50%;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            background-color: white;
+        }
+        th {
+            background-color: #008CBA;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Multiplication Table of 3</h2>
+    <input type="number" id="userInput" placeholder="Enter a number">
+    <button onclick="generateTable()">Generate Table</button>
+
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Multiplier</th>
+                <th>Result</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+    </table>
+
+    <script>
+        function generateTable() {
+            const input = document.getElementById('userInput').value;
+            const tableBody = document.getElementById('tableBody');
+            tableBody.innerHTML = "";
+
+            for (let i = 1; i <= input; i++) {
+                let row = `<tr><td>3 x ${i}</td><td>${3 * i}</td></tr>`;
+                tableBody.innerHTML += row;
+            }
+        }
+    </script>
+
+</body>
+</html>
