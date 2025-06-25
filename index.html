@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Validation</title>
+</head>
+<body>
+  <form id="signupForm">
+    <h2>Sign Up</h2>
+
+    <label>
+      Full Name
+      <input type="text" id="name" required />
+    </label>
+    <br /><br />
+
+    <label>
+      Email
+      <input type="email" id="email" required />
+    </label>
+    <br /><br />
+
+    <label>
+      Password
+      <input type="password" id="password" required />
+    </label>
+    <br /><br />
+
+    <label>
+      Age (18-99)
+      <input type="number" id="age" min="18" max="99" required />
+    </label>
+    <br /><br />
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+
+    <p id="formMessage"></p>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
