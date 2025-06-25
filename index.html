@@ -3,41 +3,38 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Form Validation</title>
+  <title>Auto3D Car Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <form id="signupForm">
-    <h2>Sign Up</h2>
+  <header>
+    <div class="logo">Auto3D</div>
+    <div class="nav">
+      <button class="btn" onclick="toggleAdmin()">Admin</button>
+    </div>
+  </header>
 
-    <label>
-      Full Name
-      <input type="text" id="name" required />
-    </label>
-    <br /><br />
+  <section class="hero">
+    <h1>Explore Cars in <span style="color: #ff5500;">3D</span></h1>
+    <div class="car-box" id="tiltBox">
+      <div class="car-3d" id="car">
+        <img src="https://images.pexels.com/photos/193991/pexels-photo-193991.jpeg" alt="Car Image" />
+      </div>
+    </div>
+  </section>
 
-    <label>
-      Email
-      <input type="email" id="email" required />
-    </label>
-    <br /><br />
+  <section class="gallery" id="gallery">
+    <img src="https://images.pexels.com/photos/358070/pexels-photo-358070.jpeg" alt="Car1">
+    <img src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg" alt="Car2">
+    <img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg" alt="Car3">
+  </section>
 
-    <label>
-      Password
-      <input type="password" id="password" required />
-    </label>
-    <br /><br />
-
-    <label>
-      Age (18-99)
-      <input type="number" id="age" min="18" max="99" required />
-    </label>
-    <br /><br />
-
-    <button type="submit">Submit</button>
-    <button type="reset">Reset</button>
-
-    <p id="formMessage"></p>
-  </form>
+  <section class="admin-section" id="adminPanel" style="display:none">
+    <h2>Admin Panel - Add Image</h2>
+    <input type="file" id="fileUpload" accept="image/*">
+    <button class="btn" onclick="addImage()">Add to Gallery</button>
+    <p id="uploadStatus"></p>
+  </section>
 
   <script src="script.js"></script>
 </body>
